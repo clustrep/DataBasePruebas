@@ -1,0 +1,17 @@
+--Creacion de base de datos tabla con esquema Adm y campos
+
+USE Pruebas
+Go 
+CREATE SCHEMA Adm
+	CREATE TABLE Clientes(
+		CodCliente INT IDENTITY PRIMARY KEY NOT NULL,
+		NombreCompleto VARCHAR(200) NOT NULL,
+		NombreCorto VARCHAR(40) NOT NULL,
+		Abreviatura VARCHAR(40) NOT NULL,
+		Ruc VARCHAR(11) NOT NULL,
+		Estado CHAR(1) NOT NULL,
+		GrupoFacturacion VARCHAR(100) NULL,
+		InactivoDesde DATETIME NULL,
+		CodigoSAP VARCHAR(20) NULL,
+	)
+Go
